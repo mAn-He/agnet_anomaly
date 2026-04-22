@@ -62,6 +62,20 @@ See [docs/datasets.md](docs/datasets.md).
 python backend/scripts/eval_ocr.py --help
 ```
 
+## Push to GitHub
+
+1. Create an **empty** repository on GitHub (no README, no .gitignore) and copy the HTTPS or SSH URL.
+2. In this folder:
+
+```bash
+git remote add origin https://github.com/YOUR_USER/YOUR_REPO.git
+git push -u origin main
+```
+
+If the default branch is `master` on the remote, use: `git push -u origin main:main` or rename as needed.
+
+Large paths are ignored (see `.gitignore`: `data/mvtec/`, `data/**/*.zip`, `node_modules/`, etc.).
+
 ## Documentation
 
 See [docs/architecture.md](docs/architecture.md) for system design and memory layers.
