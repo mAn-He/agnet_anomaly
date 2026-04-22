@@ -1,10 +1,8 @@
 # FieldOps Copilot
 
-<video src="
+# FieldOps Copilot
+
 https://github.com/user-attachments/assets/af772c63-e668-4796-aa9d-47efa4e24cb2
-" controls="controls" width="100%">
-  브라우저가 비디오 태그를 지원하지 않습니다.
-</video>
 
 Manufacturing-focused multimodal workflow for inspection report automation: LangGraph orchestration, RAG, and a Next.js GUI (MVP Phase 1 scaffold).
 
