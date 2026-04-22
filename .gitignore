@@ -1,0 +1,26 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+.env
+.env.local
+node_modules/
+.next/
+out/
+*.log
+data/raw/**/*
+!data/raw/.gitkeep
+data/processed/**/*
+!data/processed/.gitkeep
+
+# Large user-downloaded datasets (do not commit)
+data/mvtec/
+data/visa/
+data/archive.zip
+data/**/*.zip

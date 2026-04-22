@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f7fbff;
+  --surface: #ffffff;
+  --text: #0b1220;
+  --border: #dce8ff;
+  --primary: #2563eb;
+  --cyan: #38bdf8;
+  --violet: #8b5cf6;
+  --gradient: linear-gradient(135deg, #2563eb 0%, #38bdf8 55%, #8b5cf6 120%);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Premium hero glow (light theme) */
+.hero-glow {
+  background:
+    radial-gradient(1200px 500px at 10% 0%, rgba(56, 189, 248, 0.22), transparent 60%),
+    radial-gradient(900px 400px at 90% 10%, rgba(37, 99, 235, 0.18), transparent 55%),
+    radial-gradient(700px 350px at 70% 90%, rgba(139, 92, 246, 0.12), transparent 50%),
+    var(--bg);
+}
+
+.glass-orb {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(220, 232, 255, 0.45));
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 60px -30px rgba(37, 99, 235, 0.35);
+}
+
+/* Home: chat composer shell (class used in HomeUploadChatBox) */
+.home-input-shell {
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.8) inset,
+    0 20px 50px -28px rgba(37, 99, 235, 0.28);
+}

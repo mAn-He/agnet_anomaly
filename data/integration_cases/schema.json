@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fieldops-copilot.local/schemas/integration_case.json",
+  "title": "IntegrationCase",
+  "type": "object",
+  "required": ["case_id", "artifacts", "expected"],
+  "properties": {
+    "case_id": { "type": "string" },
+    "description": { "type": "string" },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "modality"],
+        "properties": {
+          "path": { "type": "string", "description": "Relative to data/integration_cases/" },
+          "modality": {
+            "type": "string",
+            "enum": ["image", "pdf", "document_image", "text", "tabular", "sensor"]
+          }
+        }
+      }
+    },
+    "worker_notes": { "type": "string" },
+    "tabular_features": { "type": "object", "additionalProperties": true },
+    "expected": {
+      "type": "object",
+      "required": ["severity", "report_sections", "structured_fields"],
+      "properties": {
+        "structured_fields": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "severity": { "type": "string", "enum": ["low", "medium", "high", "critical"] },
+        "report_sections": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "citation_refs": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}
